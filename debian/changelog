@@ -1,3 +1,9 @@
+chromium (121.0.6167.160-1revyos1deepin1) unstable; urgency=medium
+
+  * CycleClock: use RDTIME instead of RDCYCLE on RISC-V (#1727)
+
+ -- Chang Yang <yangchang@deepin.org>  Mon, 21 Jul 2025 12:53:06 +0800
+
 chromium (121.0.6167.160-1revyos1) UNRELEASED; urgency=medium
 
   [ Bo YU ]

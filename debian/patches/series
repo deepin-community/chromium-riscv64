@@ -149,3 +149,4 @@ riscv64/fix-v8-build-issue-on-riscv64.patch
 riscv64/remove-blink-BUILD-gn-unused.patch
 riscv64/sandbox.patch
 riscv64/HACK-devtools-remove-terser.patch
+riscv64/use-RDTIME-instead-of-RDCYCLE-on-RISC-V.patch
