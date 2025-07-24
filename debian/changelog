@@ -1,3 +1,9 @@
+chromium (121.0.6167.160-1revyos1deepin2) unstable; urgency=medium
+
+  * fix a missing build dependency to a generated file (#5487538)
+
+ -- Chang Yang <yangchang@deepin.org>  Thu, 24 Jul 2025 11:29:01 +0800
+
 chromium (121.0.6167.160-1revyos1deepin1) unstable; urgency=medium
 
   * CycleClock: use RDTIME instead of RDCYCLE on RISC-V (#1727)
