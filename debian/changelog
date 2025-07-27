@@ -1,3 +1,9 @@
+chromium (121.0.6167.160-1revyos1deepin3) unstable; urgency=medium
+
+  * fix build issue with syscalls
+
+ -- Chang Yang <yangchang@deepin.org>  Sun, 27 Jul 2025 12:36:59 +0800
+
 chromium (121.0.6167.160-1revyos1deepin2) unstable; urgency=medium
 
   * fix a missing build dependency to a generated file (#5487538)
