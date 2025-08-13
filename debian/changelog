@@ -1,3 +1,25 @@
+chromium (139.0.7258.66-1.1deepin1) unstable; urgency=medium
+
+  FTBFS fix for crimson:
+  * d/patches/bookworm: pick from upstream for FTBFS fix on crimson.
+    - libxml-patcherr.patch: reverted (renamed back to fixes/libxml-patcherr.patch)
+    - eslint.patch
+    - node18-import.patch
+    - derivre-create.patch: enable rust unstable features globally
+    - rust-visibility.patch: old rust version workaround
+    - gn-hpp11.patch
+  * d/patches:
+    - fixes/rust-icu-enable-fp-arithmetic.patch: enable float point arithmetic
+    feature for rust icu lib to fix FTBFS.
+  * d/patches/riscv64: Add riscv64 support.
+    - unban-clang-selection.patch: we are using our clang that supports riscv64,
+      remove upstream restriction. (this patch might upstreamable)
+    - compiler-rt.patch: LTO support.
+  * d/rules: add a roughly check on riscv64 if mem avail GB >= thread number,
+    then enable LTO.
+
+ -- Alex Rain <conrst3949@outlook.com>  Mon, 11 Aug 2025 03:18:54 +0800
+
 chromium (139.0.7258.66-1) unstable; urgency=high
 
   * New upstream stable release.
