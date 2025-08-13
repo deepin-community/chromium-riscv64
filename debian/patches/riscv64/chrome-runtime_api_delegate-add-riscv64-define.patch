@@ -1,0 +1,20 @@
+--- a/chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc	2025-08-06 20:39:27.468652370 +0800
++++ b/chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc	2025-08-06 20:40:48.409482205 +0800
+@@ -348,6 +348,8 @@
+     info->arch = extensions::api::runtime::PlatformArch::kMips64;
+   } else if (strcmp(arch, "ppc64") == 0) {
+     info->arch = extensions::api::runtime::PlatformArch::kPpc64;
++  } else if (strcmp(arch, "ppc64") == 0) {
++    info->arch = extensions::api::runtime::PlatformArch::kRiscv64;
+   } else {
+     NOTREACHED();
+   }
+@@ -365,6 +367,8 @@
+     info->nacl_arch = extensions::api::runtime::PlatformNaclArch::kMips64;
+   } else if (strcmp(nacl_arch, "ppc64") == 0) {
+     info->nacl_arch = extensions::api::runtime::PlatformNaclArch::kPpc64;
++  } else if (strcmp(nacl_arch, "riscv64") == 0) {
++    info->nacl_arch = extensions::api::runtime::PlatformNaclArch::kRiscv64;
+   } else {
+     NOTREACHED();
+   }

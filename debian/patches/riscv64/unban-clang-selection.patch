@@ -1,0 +1,20 @@
+Chromium clang doesn't support riscv64 at that time,
+as our clang supports, remove the blacklist.
+
+This can suppress many unnecessary warnings, as well
+pass the assert "LTO is only supported with lld".
+
+Index: chromium-139.0.7258.66/build/config/BUILDCONFIG.gn
+===================================================================
+--- chromium-139.0.7258.66.orig/build/config/BUILDCONFIG.gn
++++ chromium-139.0.7258.66/build/config/BUILDCONFIG.gn
+@@ -138,8 +138,7 @@ declare_args() {
+   # Set to true when compiling with the Clang compiler.
+   is_clang = current_os != "linux" ||
+              (current_cpu != "s390x" && current_cpu != "s390" &&
+-              current_cpu != "mips" && current_cpu != "mips64" &&
+-              current_cpu != "riscv64")
++              current_cpu != "mips" && current_cpu != "mips64")
+ 
+   # Allows the path to a custom target toolchain to be injected as a single
+   # argument, and set as the default toolchain.

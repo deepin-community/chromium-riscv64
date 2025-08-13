@@ -1,0 +1,25 @@
+--- a/components/variations/proto/study.proto        2025-08-06 20:48:18.954149614 +0800
++++ b/components/variations/proto/study.proto     2025-08-06 20:51:06.767882902 +0800
+@@ -265,6 +265,8 @@
+
+     // A POSIX-only value, indicating an OpenPOWER host
+     PPC64 = 5;
++
++    RISCV64 = 6;
+   }
+
+   // Enum to pass as optional bool.
+diff --git a/components/variations/service/variations_field_trial_creator_base.cc b/components/variations/service/variations_field_trial_creator_base.cc
+index 753fc845cc205..ab7f411fab366 100644
+--- a/components/variations/service/variations_field_trial_creator_base.cc
++++ b/components/variations/service/variations_field_trial_creator_base.cc
+@@ -120,6 +120,9 @@ Study::CpuArchitecture GetCurrentCpuArchitecture() {
+     }
+     return Study::X86_64;
+   }
++  if (process_arch == "RISCV_64") {
++    return Study::RISCV64;
++  }
+   NOTREACHED();
+ }
+ 
