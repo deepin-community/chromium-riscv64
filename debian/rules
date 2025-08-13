@@ -95,6 +95,9 @@ endif
 ifeq (ppc64el,$(DEB_HOST_ARCH))
 defines+=host_cpu=\"ppc64\" use_vaapi=true
 endif
+ifeq (riscv64,$(DEB_HOST_ARCH))
+defines+=host_cpu=\"riscv64\" use_vaapi=true
+endif
 
 ifdef cross_pkg_config
 defines+=pkg_config=\"$(cross_pkg_config)\"
@@ -104,6 +107,14 @@ endif
 ifeq (32,$(DEB_BUILD_ARCH_BITS))
 defines+=use_thin_lto=false \
          concurrent_links=1
+else ifeq (riscv64,$(DEB_HOST_ARCH))
+# disable lto on riscv64 for insufficient memory
+ifeq (y, $(shell sh -c "X=`free -g|awk 'NR==2{print $7}'`;Y=`nproc`;[ $X -ge $Y ] && echo y || echo n"))
+$(info memory sufficient, enable LTO on riscv64!)
+defines+=use_thin_lto=true
+else
+defines+=use_thin_lto=false
+endif
 else
 defines+=use_thin_lto=true
 endif
