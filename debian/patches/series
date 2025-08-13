@@ -9,6 +9,7 @@ fixes/ps-print.patch
 fixes/widevine-locations.patch
 fixes/rust-clanglib.patch
 fixes/material-utils.patch
+fixes/libxml-parseerr.patch
 fixes/strlcpy.patch
 fixes/memory-allocator-dcheck-assert-fix.patch
 fixes/predictor-denial-of-service.patch
@@ -51,7 +52,6 @@ bookworm/gn-revert-path-exists.patch
 bookworm/bindgen.patch
 bookworm/clang19.patch
 #bookworm/constflatset.patch
-bookworm/libxml-parseerr.patch
 bookworm/gn-allowlist.patch
 bookworm/adler1.patch
 #bookworm/constexpr3.patch
