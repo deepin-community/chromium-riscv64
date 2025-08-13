@@ -24,7 +24,7 @@ fixes/headless-gn.patch
 #fixes/make-pair.patch
 fixes/armhf-no-thumb.patch
 fixes/armhf-icf.patch
-
+fixes/rust-icu-enable-fp-arithmetic.patch
 
 disable/tests.patch
 disable/tests-swiftshader.patch
@@ -56,6 +56,11 @@ bookworm/gn-allowlist.patch
 bookworm/adler1.patch
 #bookworm/constexpr3.patch
 bookworm/foreach.patch
+bookworm/node18-import.patch
+bookworm/eslint.patch
+bookworm/rust-visibility.patch
+bookworm/gn-hpp11.patch
+bookworm/derivre-create.patch
 
 # unused patches:
 # bookworm/blink-attrib.patch
