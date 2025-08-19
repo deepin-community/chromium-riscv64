@@ -1,0 +1,13 @@
+Index: chromium-139.0.7258.66/build/config/clang/BUILD.gn
+===================================================================
+--- chromium-139.0.7258.66.orig/build/config/clang/BUILD.gn
++++ chromium-139.0.7258.66/build/config/clang/BUILD.gn
+@@ -219,6 +219,8 @@ template("clang_lib") {
+           _suffix = "-armhf"
+         } else if (current_cpu == "ppc64") {
+           _suffix = "-powerpc64le"
++        } else if (current_cpu == "riscv64") {
++          _suffix = "-riscv64"
+         } else {
+           assert(false)  # Unhandled cpu type
+         }

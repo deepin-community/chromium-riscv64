@@ -1,0 +1,22 @@
+--- a/extensions/common/api/runtime.json	2025-08-06 20:42:15.506380980 +0800
++++ b/extensions/common/api/runtime.json	2025-08-06 20:43:52.435388090 +0800
+@@ -99,7 +99,8 @@
+             {"name": "x86-64", "description": "Specifies the processer architecture as x86-64."},
+             {"name": "mips", "description": "Specifies the processer architecture as mips."},
+             {"name": "mips64", "description": "Specifies the processer architecture as mips64."},
+-            {"name": "ppc64", "description": "Specifies the processer architecture as ppc64."}
++            {"name": "ppc64", "description": "Specifies the processer architecture as ppc64."},
++            {"name": "riscv64", "description": "Specifies the processer architecture as riscv64."}
+          ],
+         "description": "The machine's processor architecture."
+       },
+@@ -113,7 +114,8 @@
+           {"name": "x86-64", "description": "Specifies the native client architecture as x86-64."},
+           {"name": "mips", "description": "Specifies the native client architecture as mips."},
+           {"name": "mips64", "description": "Specifies the native client architecture as mips64."},
+-          {"name": "ppc64", "description": "Specifies the native client architecture as ppc64."}
++          {"name": "ppc64", "description": "Specifies the native client architecture as ppc64."},
++          {"name": "riscv64", "description": "Specifies the native client architecture as riscv64."}
+         ]
+       },
+       {

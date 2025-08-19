@@ -1,0 +1,10 @@
+--- a/third_party/rust/chromium_crates_io/vendor/icu_calendar-v2/src/lib.rs	2025-08-11 15:15:48.342856423 +0800
++++ b/third_party/rust/chromium_crates_io/vendor/icu_calendar-v2/src/lib.rs	2025-08-11 15:15:37.306743304 +0800
+@@ -72,6 +72,7 @@
+ //!
+ //! [`ICU4X`]: ../icu/index.html
+ 
++#![feature(const_fn_floating_point_arithmetic)]
+ // https://github.com/unicode-org/icu4x/blob/main/documents/process/boilerplate.md#library-annotations
+ #![cfg_attr(not(any(test, doc)), no_std)]
+ #![cfg_attr(
